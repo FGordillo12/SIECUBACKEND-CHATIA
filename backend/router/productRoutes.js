@@ -1,5 +1,4 @@
 import express from 'express';
-subirImg
 import { 
   registerProducts, 
   getProducts, 

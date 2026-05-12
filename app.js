@@ -8,6 +8,7 @@ import { connectionDb } from './db/connection.js';
 import { routerNotificaciones } from './backend/router/notificacionesRouter.js';
 import { routerUsuarios } from './backend/router/userRoutes.js'; 
 import { routerProductos } from './backend/router/productRoutes.js';
+import { routerChat } from './backend/router/chatRoutes.js';
 
 const corsOptions = {
   origin: [
@@ -34,7 +35,8 @@ app.use(express.json());
 // Registro de Rutas con prefijo /api
 app.use('/api', routerUsuarios);
 app.use('/api', routerProductos);
-app.use('/api', routerNotificaciones); 
+app.use('/api', routerNotificaciones);
+app.use('/api', routerChat);
 
 app.get('/', (req, res) => {
   res.send("El servidor de Cdisfruta está funcionando");
